@@ -21,7 +21,7 @@ void replace(std::string& string, const std::string& str1, const std::string& st
         string.erase(str1_position, str1.length());
         string.insert(str1_position, str2);
 
-        str1_position = string.find(str1);
+        str1_position = string.find(str1, str1_position + str2.length());
     };
 }
 
